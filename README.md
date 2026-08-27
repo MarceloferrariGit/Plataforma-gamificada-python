@@ -111,4 +111,4 @@ Marcelo Ferrari
 RU 4501046
 
 📜 Licença
-Este projeto utiliza a licença MIT, permitindo uso livre e aberto do código.
+Este projeto utiliza a licença Pública, permitindo uso livre e aberto do código.
