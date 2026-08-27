@@ -1,1 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma web Gamificada</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --border-color: #334155;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-color: #3b82f6;
+            --accent-hover: #2563eb;
+            --success-color: #10b981;
+            --lock-color: #64748b;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 650px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        /* Topo e Menu */
+        .header {
+            padding: 20px 20px 10px 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0 0 15px 0;
+            font-size: 1.8rem;
+            color: var(--text-main);
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--text-main);
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .nav-link.active {
+            border-bottom: 2px solid var(--accent-color);
+            border-radius: 6px 6px 0 0;
+        }
+
+        /* Painel de Progresso */
+        .profile-panel {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.15);
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .stats-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.05rem;
+            font-weight: 500;
+        }
+
+        .stat-highlight {
+            color: var(--accent-color);
+            font-weight: 700;
+        }
+
+        .progress-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 5px;
+        }
+
+        .progress-label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            min-width: 75px;
+        }
+
+        .progress-bar-bg {
+            flex-grow: 1;
+            background-color: var(--border-color);
+            height: 12px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress-bar-fill {
+            background-color: var(--success-color);
+            height: 100%;
+            width: 70%; /* Representando os 70% */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+        }
+
+        .progress-percentage {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--success-color);
+            min-width: 35px;
+            text-align: right;
+        }
+
+        /* Lista de Desafios */
+        .challenges-panel {
+            padding: 25px 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            color: var(--text-main);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .challenge-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .challenge-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 18px;
+            background-color: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .challenge-item:hover:not(.locked) {
+            border-color: rgba(59, 130, 246, 0.5);
+            transform: translateY(-1px);
+        }
+
+        .challenge-item.locked {
+            opacity: 0.6;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .challenge-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1rem;
+        }
+
+        .challenge-number {
+            color: var(--text-muted);
+            font-weight: bold;
+        }
+
+        /* Botões de Ação */
+        .btn {
+            padding: 8px 16px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.2s;
+            text-decoration: none;
+        }
+
+        .btn-start {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .btn-start:hover {
+            background-color: var(--accent-hover);
+        }
+
+        .btn-locked {
+            background-color: var(--lock-color);
+            color: rgba(255, 255, 255, 0.7);
+            cursor: not-allowed;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Rodapé */
+        .footer {
+            padding: 15px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Topo e Menu -->
+        <div class="header">
+            <h1>Plataforma Web Gamificada</h1>
+            <nav class="nav-menu">
+                <a href="#" class="nav-link">Início</a>
+                <a href="#" class="nav-link active">Desafios</a>
+                <a href="#" class="nav-link">Ranking</a>
+                <a href="#" class="nav-link">Meu Progresso</a>
+            </nav>
+        </div>
+
+        <!-- Painel de Progresso Gamificado -->
+        <div class="profile-panel">
+            <div class="stats-row">
+                <div>Nível Atual: <span class="stat-highlight">1</span></div>
+                <div>Pontuação: <span class="stat-highlight">120 XP</span></div>
+            </div>
+            <div class="progress-container">
+                <div class="progress-label">Progresso:</div>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill"></div>
+                </div>
+                <div class="progress-percentage">70%</div>
+            </div>
+        </div>
+
+        <!-- Desafios Disponíveis -->
+        <div class="challenges-panel">
+            <div class="section-title">Desafios Disponíveis</div>
+            
+            <div class="challenge-list">
+                <!-- Desafio 1 -->
+                <div class="challenge-item">
+                    <div class="challenge-info">
+                        <span class="challenge-number">(1)</span>
+                        <span>Variáveis e Entrada de Dados</span>
+                    </div>
+                    <button class="btn btn-start">Iniciar</button>
+                </div>
+
+                <!-- Desafio 2 -->
+                <div class="challenge-item">
+                    <div class="challenge-info">
+                        <span class="challenge-number">(2)</span>
+                        <span>Condicionais</span>
+                    </div>
+                    <button class="btn btn-start">Iniciar</button>
+                </div>
+
+                <!-- Desafio 3 -->
+                <div class="challenge-item locked">
+                    <div class="challenge-info">
+                        <span class="challenge-number">(3)</span>
+                        <span>Laços de Repetição</span>
+                    </div>
+                    <button class="btn btn-locked" disabled>🔒 Bloqueado</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rodapé -->
+        <div class="footer">
+            Plataforma Gamificada Python - RU4501046
+        </div>
+    </div>
+
+</body>
+</html>
 
