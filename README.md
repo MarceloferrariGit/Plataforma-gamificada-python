@@ -4,7 +4,7 @@ Este repositório contém o código-fonte e os artefatos do Trabalho de Conclus�
 
 ---
 
-## 🎯 Objetivo do Projeto
+##  Objetivo do Projeto
 
 Desenvolver uma plataforma web interativa que auxilie estudantes iniciantes e intermediários no aprendizado de programação em Python, utilizando elementos de gamificação para aumentar o engajamento, motivação e persistência.
 
@@ -18,7 +18,7 @@ A plataforma inclui:
 
 ---
 
-## 🧩 Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 ### **Frontend (Web)**
 - HTML5  
@@ -37,7 +37,7 @@ A plataforma inclui:
 
 ---
 
-## 🖼️ Prints da Plataforma (Mockups Web)
+##  Prints da Plataforma (Mockups Web)
 
 ### **Tela Inicial**
 ![Tela Inicial](mockups/tela_inicial.png)
@@ -77,7 +77,7 @@ Plataforma-gamificada-python/
 ```
 ---
 
-## 🧪 Exemplos de Código
+##  Exemplos de Código
 
 ### Desafio em Python
 ```python
@@ -96,7 +96,7 @@ def validar_resposta(funcao_estudante):
         return False
 
 ```
-# 🚀 Como Executar o Projeto
+#  Como Executar o Projeto
 git clone https://github.com/MarceloferrariGit/Plataforma-gamificada-python
 
 1. Clone o repositório
