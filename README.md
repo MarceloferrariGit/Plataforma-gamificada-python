@@ -109,9 +109,9 @@ git clone https://github.com/MarceloferrariGit/Plataforma-gamificada-python
 4. Execute scripts Python: python backend/validacao.py
 
 
-👨‍💻 Autor
+Autor
 Marcelo Ferrari  
 RU 4501046
 
-📜 Licença
+Licença
 Este projeto utiliza a licença Pública, permitindo uso livre e aberto do código.
