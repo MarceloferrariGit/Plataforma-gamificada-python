@@ -1,6 +1,6 @@
-# Plataforma Web Gamificada para Ensino de Programação em Python
+Plataforma Web Gamificada para Ensino de Programação em Python
 
-Este repositório contém o código-fonte e os artefatos do Trabalho de Conclusão de Curso (TCC) desenvolvido por **Marcelo Ferrari RU4501046**, cujo objetivo é criar uma **plataforma web gamificada** voltada ao ensino de programação em Python, com desafios progressivos, pontuação, ranking e feedback automático.
+Este repositório contém o código-fonte e os artefatos do Trabalho de Conclusão de Curso (TCC) desenvolvido por Marcelo Ferrari RU4501046, cujo objetivo é criar uma plataforma web gamificada voltada ao ensino de programação em Python, com desafios progressivos, pontuação, ranking e feedback automático.
 
 ---
 
@@ -57,7 +57,7 @@ Tela de Ranking (Mockup Web)
 Código-fonte da plataforma web gamificada para ensino de programação em Python
 
 Exemplos de Código
-Desafio em Python**
+Desafio em Python
 
 ```python
 ## Desafio
