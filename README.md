@@ -38,63 +38,21 @@ Infraestrutura
 ---
 
 Prints / Mockups da Plataforma
-
 Tela Inicial (Mockup Web)
 
+---
+
 Plataforma-gameficada-python
-+---------------------------------------------------------------+
-|                      Plataforma Python+                       |
-+---------------------------------------------------------------+
-| Menu: [Início] [Desafios] [Ranking] [Meu Progresso]           |
-+---------------------------------------------------------------+
-| Nível Atual: 1                                                |
-| Pontuação: 120 XP                                             |
-| Progresso:  [███████-----] 70%                                |
-+---------------------------------------------------------------+
-| Desafios Disponíveis                                          |
-|                                                               |
-|  (1) Variáveis e Entrada de Dados        [Iniciar]            |
-|  (2) Condicionais                        [Iniciar]            |
-|  (3) Laços de Repetição                  [Bloqueado]          |
-|                                                               |
-+---------------------------------------------------------------+
-| Rodapé:       - Plataforma Gamificada Python -                |
-+---------------------------------------------------------------+
+<img width="400" height="494" alt="image" src="https://github.com/user-attachments/assets/404fcf63-1b3a-4857-9b02-4208d37f19a6" />
+---
 
 Tela de Desafio (Mockup Web)
-+---------------------------------------------------------------+
-|                     Desafio 1: Soma Simples                   |
-+---------------------------------------------------------------+
-| Enunciado:                                                    |
-| Crie uma função que receba dois números e retorne a soma.     |
-+---------------------------------------------------------------+
-| Área de Código:                                               |
-|                                                               |
-| def soma(a, b):                                               |
-|     # escreva seu código aqui                                 |
-|                                                               |
-+---------------------------------------------------------------+
-| [Executar Código]                                             |
-+---------------------------------------------------------------+
-| Feedback:                                                     |
-| ✔ Sua resposta está correta!                                  |
-| ou                                                            |
-| ✖ Resultado incorreto. Tente novamente.                       |
-+---------------------------------------------------------------+
+<img width="400" height="494" alt="image" src="https://github.com/user-attachments/assets/984267fa-50a6-46ec-b5e8-2c4bd2c81e92" />
+---
 
 Tela de Ranking (Mockup Web)
-+---------------------------------------------------------------+
-|                           Ranking                             |
-+---------------------------------------------------------------+
-|  Posição | Usuário           | Pontuação | Nível              |
-+---------------------------------------------------------------+
-|    1     | Aluno_A	       |  980 XP   |   5                |
-|    2     | Aluno_B           |  870 XP   |   4                |
-|    3     | Aluno_C           |  820 XP   |   4                |
-|    4     | Aluno_D           |  600 XP   |   3                |
-+---------------------------------------------------------------+
-| Observação: Ranking atualizado automaticamente.               |
-+---------------------------------------------------------------+
+<img width="400" height="494" alt="image" src="https://github.com/user-attachments/assets/02b90d81-bd48-4c2b-8cbc-af1d92aac9b6" />
+---
 
 Código-fonte da plataforma web gamificada para ensino de programação em Python
 
