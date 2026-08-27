@@ -1,3 +1,6 @@
+![Status](https://img.shields.io/badge/status-em%20desenvolvimento-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Python](https://img.shields.io/badge/python-3.10+-yellow)
 # Plataforma Web Gamificada para Ensino de Programação em Python
 
 Este repositório contém o código-fonte e os artefatos do Trabalho de Conclusão de Curso (TCC) desenvolvido por **Marcelo Ferrari – RU 4501046**, cujo objetivo é criar uma **plataforma web gamificada** voltada ao ensino de programação em Python, com desafios progressivos, pontuação, ranking e feedback automático.
